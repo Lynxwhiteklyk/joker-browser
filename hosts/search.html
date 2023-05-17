@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joker Browser</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        @keyframes blink {
+            0% {
+                opacity: 0.5;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.5;
+            }
+        }
+
+        .welcome-message {
+            animation: blink 1s linear infinite;
+            text-align: center;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px;
+            border: 2px solid green;
+            border-radius: 4px;
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-bar input[type="text"]:focus {
+            outline: none;
+            border-color: #ff4081;
+            box-shadow: 0 0 5px rgba(255, 64, 129, 0.7);
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .search-bar button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="welcome-message">Добро пожаловать в Joker Browser</h1>
+    </header>
+
+    <main>
+        <form action="joker://search" method="GET">
+            <div class="search-bar">
+                <input type="text" name="q" placeholder="Поиск...">
+                <button type="submit">Поиск</button>
+            </div>
+        </form>
+
+        <h2>Последние новости</h2>
+        <p>Ознакомьтесь с нашими новыми функциями и обновлениями!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </main>
+
+    <footer>
+        <p>Joker Browser &copy; 2023. Все права защищены.</p>
+    </footer>
+</body>
+
+</html>
+

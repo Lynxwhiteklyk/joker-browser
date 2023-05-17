@@ -1,0 +1,19 @@
+структура:
+joker-browser/
+	config.sh
+	browser/
+		app.py
+	server/
+		main.py
+		dns_server.py
+		server.py
+		protocol_joker.py
+		domains.py
+		data_domains.csv
+		sql_config.py
+		data_sql.db
+		search_db.py
+	hosts/
+		search.html
+		styles.css
+		
